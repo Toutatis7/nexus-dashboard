@@ -7,6 +7,8 @@ import {
 } from 'lucide-react'
 
 import StatCard from '../components/dashboard/StatCard'
+import RevenueChart from '../components/dashboard/RevenueChart'
+import CategoryChart from '../components/dashboard/CategoryChart'
 
 function Dashboard() {
   return (
@@ -59,6 +61,15 @@ function Dashboard() {
         />
 
       </div>
+      {/* Gráfica de evolución de ingresos */}
+      <div className="mt-8 grid grid-cols-1 gap-6 xl:grip-cols-2">
+        {/* Evolucion de ingresos */}
+        <RevenueChart />
+
+        {/* Distribucion de ventas */}
+        <CategoryChart />
+      </div>
+
 
     </section>
   )
