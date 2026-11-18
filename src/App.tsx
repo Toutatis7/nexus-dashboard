@@ -1,30 +1,54 @@
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router'
+
+// Layout compartido
+import DashboardLayout from './components/layout/DashboardLayout'
+
+// Páginas
+import Dashboard from './pages/Dashboard'
+import Usuarios from './pages/Usuarios'
+import Ventas from './pages/Ventas'
+import Analiticas from './pages/Analiticas'
+import Configuracion from './pages/Configuracion'
+import Ayuda from './pages/Ayuda'
 
 function App() {
-
-
+  
   return (
-    <main className="min-h-screen bg-slate-950 flex items-center justify-center p-6">
-      <section className="max-w-lg rounded-2xl bg-white p-10 shadow-2xl text-center">
+    <BrowserRouter>
 
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">
-          NEXUS
-        </h1>
+      <Routes>
 
-        <p className="text-slate-600 text-lg mb-6">
-          Business Analytics
-        </p>
+        {/* Layout principal: permanece visible */}
+        <Route element={<DashboardLayout />}>
 
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
-          Entrar al Dashboard
-        </button>
+          {/* Página inicial */}
+          <Route path="/" element={<Dashboard />} />
 
-        <p className="text-xs text-slate-400 mt-8">
-          React + TypeScript + Tailwind CSS
-        </p>
+          {/* Gestión de usuarios */}
+          <Route path="/usuarios" element={<Usuarios />} />
 
-      </section>
-    </main>
+          {/* Gestión de ventas */}
+          <Route path="/ventas" element={<Ventas />} />
+
+          {/* Analíticas del negocio */}
+          <Route path="/analiticas" element={<Analiticas />} />
+
+          {/* Configuración */}
+          <Route path="/configuracion" element={<Configuracion />} />
+
+          {/* Ayuda */}
+          <Route path="/ayuda" element={<Ayuda />} />
+
+        </Route>
+
+      </Routes>
+
+    </BrowserRouter>
   )
 }
 
