@@ -9,6 +9,7 @@ import {
 import StatCard from '../components/dashboard/StatCard'
 import RevenueChart from '../components/dashboard/RevenueChart'
 import CategoryChart from '../components/dashboard/CategoryChart'
+import RecentActivity from '../components/dashboard/RecentActivity'
 
 function Dashboard() {
   return (
@@ -68,6 +69,11 @@ function Dashboard() {
 
         {/* Distribucion de ventas */}
         <CategoryChart />
+      </div>
+
+      {/* Tabla de actividad reciente */}
+      <div className="mt-8">
+        <RecentActivity />
       </div>
 
 
