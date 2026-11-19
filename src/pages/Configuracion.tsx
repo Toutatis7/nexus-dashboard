@@ -85,7 +85,7 @@ function Configuracion() {
               type="email"
               value={email}
               onChange={(event) => {
-                setName(event.target.value)
+                setEmail(event.target.value)
                 setSaved(false)
               } }
               className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -102,7 +102,7 @@ function Configuracion() {
               type="text"
               value={company}
               onChange={(event) => {
-                setName(event.target.value)
+                setCompany(event.target.value)
                 setSaved(false)
               } }
               className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
